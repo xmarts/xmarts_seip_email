@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       <record id="email_estudio" model="mail.template">
+            <field name="name">Estudio</field>
+            <field name="email_from">${object.hospital_origen and object.hospital_origen.email}</field>
+            <field name="partner_to">${object.patient.id}</field>
+            <field name="subject">${object.name}</field>
+            <field name="email_to">${object.patient.id}</field>
+            <field name="lang">${object.lang}</field>
+            <field name="model_id" ref="oehealth.model_oeh_medical_lab_test"/>
+            <field name="auto_delete" eval="True"/>
+            <!-- 
+            <field name="report_template" ref="oehealth.report_oeh_medical_patient_labtest"/>
+            <field name="report_name">${object.name}</field> -->
+            <field name="body_html" type="html">
+                
+            </field>
+        </record>
+    </data>
+</odoo>

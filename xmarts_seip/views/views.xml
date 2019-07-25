@@ -1,0 +1,16 @@
+<odoo>
+  <record id="oeh_medical_lab_test_inherit" model="ir.ui.view">
+      <field name="name">oeh.medical.lab.test.inherit</field>
+      <field name="model">oeh.medical.lab.test</field>
+      <field name="inherit_id" ref="oehealth.oeh_medical_lab_test_form"/>
+      <field name="arch" type="xml">
+  
+
+        <xpath expr="//button[@name='action_lab_invoice_create']" position="after">
+             <button string='Enviar por correo' name="action_sent" type="object" class="oe_highlight" />
+         
+        </xpath>
+      </field>
+    </record>
+      
+</odoo>
